@@ -155,6 +155,18 @@ abstract class AbstractContainer extends AbstractElement
     }
 
     /**
+     * @param \PhpOffice\PhpWord\Element\AbstractElement $element
+     *
+     * @return \PhpOffice\PhpWord\Element\AbstractElement
+     */
+    public function appendElement($element)
+    {
+        $this->elements[] = $element;
+
+        return $element;
+    }
+
+    /**
      * Get all elements
      *
      * @return array
